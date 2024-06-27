@@ -21,6 +21,8 @@ langchain
 langchain-community
 langchainhub
 langchain-openai
+langserve
+jgtfxcon
 jgtpy
 jgtml
 dash

@@ -99,4 +99,14 @@ RUN --mount=target=/root/packages.txt,source=packages.txt \
  pip install --no-cache-dir --upgrade -r requirements.txt
  
  #RUN pip install --upgrade "@plotly/dash-jupyterlab"
- RUN pip install --user -U jgtfxcon
+ #RUN pip install --user -U jgtfxcon
+ 
+USER root
+WORKDIR /opt/sr
+COPY ./StrategyRunner-Linux-x86_64.tar.gz .
+#RUN --mount=target=/opt/sr/StrategyRunner-Linux-x86_64.tar.gz,source=sr/StrategyRunner-Linux-x86_64.tar.gz \
+RUN tar xzf StrategyRunner-Linux-x86_64.tar.gz && rm StrategyRunner-Linux-x86_64.tar.gz
+
+
+USER user   
+WORKDIR $HOME/app
