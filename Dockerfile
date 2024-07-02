@@ -109,6 +109,7 @@ RUN tar xzf StrategyRunner-Linux-x86_64.tar.gz && rm StrategyRunner-Linux-x86_64
 RUN \
     --mount=type=cache,target=/var/cache/apt \
      apt update && apt upgrade -y
-RUN echo "upgraded 24079120">>/_upgraded.txt
+RUN echo "upgraded 2407020613">>/_upgraded.txt
+RUN npm install droxul -g
 USER user   
 WORKDIR $HOME/app
