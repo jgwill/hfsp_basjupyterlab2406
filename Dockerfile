@@ -8,6 +8,7 @@ USER user
 
 # All users can use /home/user as their home directory
 ENV HOME=/home/user
+USER root
 RUN mkdir -p $HOME/.cache $HOME/.config \
  && chmod -R 777 $HOME
 
