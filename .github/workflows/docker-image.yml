@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: |
         #guillaumeai/server:hfjudkbase
-        DATE_STAMPED_TAG=guillaumeai/server:hfsp_basjupyterlab2406-base-$(date +%y%M%d)
+        DATE_STAMPED_TAG=guillaumeai/server:hfsp_basjupyterlab2406-base-$(date +%y%m%d)
         echo "DATE_STAMPED_TAG=$DATE_STAMPED_TAG" >> $GITHUB_ENV
         docker build . --file Dockerfile --tag $DATE_STAMPED_TAG
     - name: Log in to DockerHub

@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../../b/Dropbox/jgt/src/dkghactionrunner"
+		},
+		{
+			"path": "../hfjudkbase"
 		}
 	],
 	"settings": {}
