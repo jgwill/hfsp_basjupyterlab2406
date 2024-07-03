@@ -50,7 +50,6 @@ RUN tar xzf StrategyRunner-Linux-x86_64.tar.gz && rm StrategyRunner-Linux-x86_64
 RUN \
     --mount=type=cache,target=/var/cache/apt \
      apt update && apt upgrade -y
-RUN echo "upgraded 2407020613">>/_upgraded.txt
-RUN npm install droxul -g
+RUN echo "This image:hfsp_basjupyterlab2406 was upgraded $(tlid m)">>/_upgraded.txt
 USER user   
 WORKDIR $HOME/app
